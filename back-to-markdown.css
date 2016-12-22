@@ -1,0 +1,52 @@
+/*
+CSS code released under the following license:
+
+The ISC License
+
+Copyright (c) Isaac Z. Schlueter
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+*/
+
+* { font-family:Triplicate T4, monospace; font-size:1em; border:0; margin:0; padding:0; list-style:none; font-weight:normal; }
+h1, h2, h3, h4, h5, h6, ul, ol, p, pre, li { margin-bottom:1em }
+strong, b { font-weight: bold }
+em, i { font-style: italic }
+hr::before { display: block; height: 2em; content: "----"; color: #f0f }
+strong::before, strong::after, b::before, b::after { content: "**" }
+em::before, em::after, i::before, i::after { content: "_" }
+pre, code { background: #fafafa; color:#000 }
+pre { overflow:auto }
+pre::before, pre::after { content:"```"; display: block }
+code::before, code::after { content: "`"; background: #fff }
+pre code::before, pre code::after { content: "" }
+ol li { margin-left: 4ex; }
+ul li { margin-left: 3ex; }
+ol li { list-style: decimal outside }
+h1, h2, h3, h4, h5, h6 { color:#900; margin-top: 2em }
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { background: #fff }
+h1::before { content: "# "; color:#09a }
+h2::before { content: "## "; color:#09a }
+h3::before { content: "### "; color:#09a }
+h4::before { content: "#### "; color:#09a }
+h5::before { content: "##### "; color:#09a }
+h6::before { content: "###### "; color:#09a }
+ul li::before { content: "* "; display:block; margin-left:-3ex; color: #fb0; float:left }
+body { width: 100ex; margin: 1em auto }
+a { text-decoration: none }
+a:hover::before, a:hover::after { color:#f00; text-decoration: underline }
+a::before { content: "[" }
+a::after { content: "](" attr(href) ")" }
+@media print {
+  body { width:auto; font-size:10pt }
+}
