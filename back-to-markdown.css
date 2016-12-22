@@ -25,7 +25,11 @@ em, i { font-style: italic }
 hr::before { display: block; height: 2em; content: "----"; color: #f0f }
 strong::before, strong::after, b::before, b::after { content: "**" }
 em::before, em::after, i::before, i::after { content: "_" }
-pre, code { background: #fafafa; color:#000 }
+
+/* without ::nth-line(n)::before, can't make this look like most blockquotes */
+blockquote::after, blockquote::before { content: ">>" }
+
+blockquote, pre, code { background: #fafafa; color:#000 }
 pre { overflow:auto }
 pre::before, pre::after { content:"```"; display: block }
 code::before, code::after { content: "`"; background: #fff }
